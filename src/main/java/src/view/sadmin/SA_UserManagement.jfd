@@ -1,0 +1,191 @@
+JFDML JFormDesigner: "8.2.2.0.382" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class javax.swing.BoxLayout ) ) {
+			name: "this"
+			"resizable": false
+			"title": "超级管理员账户管理"
+			"modal": true
+			"modalExclusionType": enum java.awt.Dialog$ModalExclusionType APPLICATION_EXCLUDE
+			"$sizePolicy": 1
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 1
+			} ) {
+				name: "panel4"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "accountTable"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel1"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label7"
+						"text": "检索条件"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "账户ID"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "accountIDTextFiled"
+						"columns": 10
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "账户类型"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "accountTypeComboBox"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "管理员账号"
+							addElement( "管理员账号" )
+							addElement( "会员账号" )
+						}
+						"selectedIndex": -1
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "支付方式"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "paymentMethodComboBox"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "微信支付"
+							addElement( "微信支付" )
+							addElement( "支付宝" )
+						}
+						"selectedIndex": -1
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label9"
+						"text": "用户名"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "userNameSearchTextField"
+						"columns": 5
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel7"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label10"
+						"text": "身份证号"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "identityIDTextField"
+						"columns": 10
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label11"
+						"text": "性别"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "genderComboBox"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "男"
+							addElement( "男" )
+							addElement( "女" )
+						}
+						"selectedIndex": -1
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label12"
+						"text": "年龄"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "ageTextField"
+						"columns": 5
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label13"
+						"text": "姓名"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "nameTextField"
+						"columns": 5
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "searchAccountBtn"
+						"text": "查询"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchAccountBtnClicked", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel3"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "deleteAccountBtn"
+						"text": "删除选中账户"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteAccountBtnClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "modifyManagerUserNameOrPasswordBtn"
+						"text": "修改管理员用户名或密码"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "modifyManagerNameOrPasswordBtnClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button1"
+						"text": "刷新"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 1
+			} ) {
+				name: "panel5"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel6"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "添加新管理员字段"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel8"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label5"
+						"text": "密码"
+					} )
+					add( new FormComponent( "javax.swing.JPasswordField" ) {
+						name: "passwordTextField"
+						"columns": 20
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel11"
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "isNewAdminComboBox"
+						"text": "是否为新管理员"
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel12"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label8"
+						"text": "输入新管理员的身份证号或老管理员的账户ID"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "accountIDOrIdentityIDTextField"
+						"columns": 10
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel2"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "addAccountBtn"
+						"text": "确认添加"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addAccountBtnClicked", true ) )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 15 )
+			"size": new java.awt.Dimension( 1015, 535 )
+		} )
+	}
+}

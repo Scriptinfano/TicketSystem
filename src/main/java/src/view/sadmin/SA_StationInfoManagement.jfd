@@ -1,0 +1,64 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class javax.swing.BoxLayout ) {
+			"axis": 1
+		} ) {
+			name: "this"
+			"title": "超级管理员站点信息管理"
+			"modal": true
+			"modalExclusionType": enum java.awt.Dialog$ModalExclusionType APPLICATION_EXCLUDE
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "stationTable"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "新加或检索站点名："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "stationNameTextField"
+					"columns": 7
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "addStationBtn"
+					"text": "添加"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addStationBtnClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "modifyStationBtn"
+					"text": "编辑"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "modifyStationBtnClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "deleteStationBtn"
+					"text": "删除"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteStationBtnClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "searchStationBtn"
+					"text": "查询"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchStationBtnClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "刷新"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 15 )
+			"size": new java.awt.Dimension( 560, 415 )
+		} )
+	}
+}

@@ -1,0 +1,73 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class javax.swing.BoxLayout ) {
+			"axis": 1
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"title": "用户主界面"
+			"$sizePolicy": 1
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "trainServiceTable"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "orderTicketBtn"
+					"text": "订票"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "orderTicketBtnClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "flushTrainServiceBtn"
+					"text": "刷新车次列表"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "flushTrainServiceBtnClicked", true ) )
+				} )
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "myCurrentTicketMenuItem"
+					"text": "我的当前订票"
+					"preferredSize": new java.awt.Dimension( 20, 21 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "myCurrentTicketMenuItemClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "myTicketHistoryMenuItem"
+					"text": "我的历史订票"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "myTicketHistoryMenuItemClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "modifyTicketMenuItem"
+					"text": "改签"
+					"preferredSize": new java.awt.Dimension( 20, 21 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "changeTicketMenuItemClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "refundMenuItem"
+					"text": "退票"
+					"preferredSize": new java.awt.Dimension( 20, 21 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "refundMenuItmClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "addNewAccountMenuItem"
+					"text": "添加新账号"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addNewAccountClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "personalInfoMenuItem"
+					"text": "我的个人信息"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "personalInfoMenuItemClicked", true ) )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 15, 0 )
+			"size": new java.awt.Dimension( 815, 415 )
+		} )
+	}
+}

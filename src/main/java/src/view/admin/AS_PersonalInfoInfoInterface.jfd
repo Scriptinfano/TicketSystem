@@ -1,0 +1,109 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class javax.swing.BoxLayout ) {
+			"axis": 1
+		} ) {
+			name: "this"
+			"title": "管理员个人信息管理"
+			"modalExclusionType": enum java.awt.Dialog$ModalExclusionType APPLICATION_EXCLUDE
+			"modal": true
+			"resizable": false
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+				"alignment": 0
+			} ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "姓名："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "nameTextField"
+					"columns": 10
+					"editable": false
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "性别："
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "genderComboBox"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "男"
+						addElement( "男" )
+						addElement( "女" )
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"text": "年龄："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "ageTextField"
+					"columns": 6
+					"editable": false
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+				"alignment": 0
+			} ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "身份证号码："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "identificationTextField"
+					"columns": 18
+					"editable": false
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+				"alignment": 0
+			} ) {
+				name: "panel3"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "联系方式："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "contactInfoTextField"
+					"columns": 12
+					"editable": false
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) {
+				"alignment": 0
+			} ) {
+				name: "panel5"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label6"
+					"text": "注册时间"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "registerTimeTextField"
+					"columns": 10
+					"editable": false
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel4"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "modifyBtn"
+					"text": "开始修改"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "modifyBtnClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "rreturnBtn"
+					"text": "返回"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "returnBtnClicked", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 45 )
+			"size": new java.awt.Dimension( 590, 300 )
+		} )
+	}
+}

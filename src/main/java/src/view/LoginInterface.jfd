@@ -1,0 +1,61 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class javax.swing.BoxLayout ) {
+			"axis": 1
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"title": "登录界面"
+			"resizable": false
+			"$locationPolicy": 1
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "账户ID："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "accountIDTextField"
+					"columns": 15
+					"preferredSize": new java.awt.Dimension( 170, 30 )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "密   码："
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "passwordTextField"
+					"columns": 20
+					"preferredSize": new java.awt.Dimension( 170, 30 )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel3"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "signInBtn"
+					"text": "注册"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "signInBtnClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "loginBtn"
+					"text": "登录"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "loginBtnClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "loginSuperAdminBtn"
+					"text": "登录超级管理员"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "loginSuperAdminBtnClicked", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 420, 210 )
+		} )
+	}
+}

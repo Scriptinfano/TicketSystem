@@ -1,0 +1,92 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class javax.swing.BoxLayout ) {
+			"axis": 1
+		} ) {
+			name: "this"
+			"title": "超级管理员车次调度管理"
+			"resizable": false
+			"modalExclusionType": enum java.awt.Dialog$ModalExclusionType APPLICATION_EXCLUDE
+			"$sizePolicy": 1
+			"modal": true
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "trainServiceTable"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"text": "检索条件"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "起始站："
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "startStationComboBox"
+					"minimumSize": new java.awt.Dimension( 85, 30 )
+					"preferredSize": new java.awt.Dimension( 100, 30 )
+					auxiliary() {
+						"JavaCodeGenerator.typeParameters": "String"
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "终点站："
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "endStationComboBox"
+					"minimumSize": new java.awt.Dimension( 85, 30 )
+					"preferredSize": new java.awt.Dimension( 100, 30 )
+					auxiliary() {
+						"JavaCodeGenerator.typeParameters": "String"
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "列车号："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "trainIdTextField"
+					"columns": 8
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "发车时间："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "departureTimeTextField"
+					"columns": 10
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "searchTrainBtn"
+					"text": "查询车次"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "findTrain", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "addTrainBtn"
+					"text": "添加车次"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addTrain", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "flushBtn"
+					"text": "刷新"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "flushBtnClicked", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 820, 415 )
+		} )
+	}
+}

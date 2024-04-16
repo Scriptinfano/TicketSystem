@@ -1,0 +1,113 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class javax.swing.BoxLayout ) {
+			"axis": 1
+		} ) {
+			name: "this"
+			"title": "管理员主界面"
+			"defaultCloseOperation": 3
+			"resizable": false
+			"$sizePolicy": 1
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector )
+					}, new java.util.Vector, new java.util.Vector, new java.util.Vector, new java.util.Vector )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel2"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label8"
+					"text": "为指定乘客改签退票"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "账户ID号"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "accountIDTextField"
+					"columns": 18
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "ticketChangeBtn"
+					"text": "开始改签"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ticketChangeBtnClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "ticketRefundBtn"
+					"text": "开始退票"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ticketRefundBtnClicked", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel4"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "起始站："
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "startStationComboBox"
+					auxiliary() {
+						"JavaCodeGenerator.typeParameters": "String"
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label4"
+					"text": "终点站："
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "endStationComboBox"
+					auxiliary() {
+						"JavaCodeGenerator.typeParameters": "String"
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label5"
+					"text": "时间："
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "departureTimeTextField"
+					"columns": 10
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label7"
+					"text": "车次号"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "trainIDTextField"
+					"columns": 10
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "searchTrainServiceBtn"
+					"text": "查询车次"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchTrainServiceBtnClicked", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel3"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "orderBtn"
+					"text": "开始订票"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "orderBtnClicked", true ) )
+				} )
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormComponent( "javax.swing.JMenuItem" ) {
+					name: "personalInfoTextField"
+					"text": "我的个人信息"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "personalInfoTextFieldClicked", true ) )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 10 )
+			"size": new java.awt.Dimension( 865, 415 )
+		} )
+	}
+}

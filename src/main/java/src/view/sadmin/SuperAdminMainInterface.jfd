@@ -1,0 +1,59 @@
+JFDML JFormDesigner: "8.2.1.0.348" Java: "17.0.9" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class javax.swing.BoxLayout ) {
+			"axis": 1
+		} ) {
+			name: "this"
+			"resizable": false
+			"$sizePolicy": 1
+			"title": "超级管理员主界面"
+			"defaultCloseOperation": 3
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel6"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "trainDispatchingManageBtn"
+					"text": "车次调度管理"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "trainDispatchingManageBtnClicked", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel5"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "stationInfoManageBtn"
+					"text": "站点信息管理"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "stationInfoManageBtnClicked", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel4"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "usersManageBtn"
+					"text": "用户管理"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "usersManageBtnClicked", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel3"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "ticketPriceManageBtn"
+					"text": "票价管理"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ticketPriceManageBtnClicked", true ) )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+				name: "panel1"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "financialStatisticsBtn"
+					"text": "财务统计"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "financialStatisticsBtnClicked", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 350, 300 )
+		} )
+	}
+}
